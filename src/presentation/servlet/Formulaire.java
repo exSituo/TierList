@@ -1,6 +1,6 @@
 package presentation.servlet;
 
-public class formulaire
+public class Formulaire
 {
 
 }
