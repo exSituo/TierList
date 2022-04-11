@@ -6,8 +6,18 @@ body {
     
 }
 
+table{
+    background-color: white;
+    text-align: center;
+    color: black;
+    border: 2px solid gold;
+    width: 50%;
+}
+
 .GOAT{
     background-color: red;
     color: gold;
-    border: 2px solid black;    
+    text-align: center;
+    border: 2px solid blue;    
+    width: 25%
 }
