@@ -9,7 +9,34 @@
 <title>Tier List Animé</title>
 </head>
 <body>
+    <table>
+        <tr>
+            <th>Tier</th>
+            <th>Animé</th>
+        </tr>
+        <tr>
+            <td class="GOAT">GOAT</td>
+            <td></td>       
+        </tr>
+        <tr>
+            <td>GOD</td>
+            <td></td>       
+        </tr>        
+        <tr>
+            <td>OK</td>
+            <td></td>       
+        </tr>        
+        <tr>
+            <td>Bad</td>
+            <td></td>       
+        </tr>
+        <tr>
+            <td>CRINGE</td>
+            <td></td>       
+        </tr>
     
+    
+    </table>
 
 </body>
 </html>
