@@ -10,3 +10,4 @@ Une tier-list est un classement ordonnée (de 'GOAT' à 'Cringe' selon des terme
 
 
 
+![](https://raw.githubusercontent.com/QJoly/TierListProject/main/ProjetTierList.drawio.png?token=GHSAT0AAAAAABTGJP3ZLFSZFONBVHXRSYE2YSUDJLA)
