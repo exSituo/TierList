@@ -7,7 +7,8 @@ then
 	echo "La base de donnee existe deja.."
 	psql tierlist < tierlist.sql 
 else 
-	echo "La base de donnee n'existe pas"
+	echo "La base de donnee n'existe pas, création en cours..."
 	createdb tierlist
+	echo "Création de la BDD -> OK"
 	psql tierlist < tierlist.sql 
 fi 
