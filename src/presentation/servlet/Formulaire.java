@@ -18,7 +18,7 @@ public class Formulaire extends HttpServlet
     {
         try
         {
-            request.getRequestDispatcher("WEB-INF/index.jsp").forward(request, response);
+            request.getRequestDispatcher("WEB-INF/tierliste.jsp").forward(request, response);
 
         }
         catch (Exception e)
