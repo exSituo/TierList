@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = {"/index.html", "accueil"})
+@WebServlet(urlPatterns = {"/index.html", "/accueil"})
 public class Formulaire extends HttpServlet
 {
     private static final long serialVersionUID = 1L;
@@ -19,7 +19,6 @@ public class Formulaire extends HttpServlet
         try
         {
             request.getRequestDispatcher("WEB-INF/tierliste.jsp").forward(request, response);
-
         }
         catch (Exception e)
         {
