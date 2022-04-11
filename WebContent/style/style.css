@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+body {
+    background-color: black;
+    color: white;
+    
+}
+
+.GOAT{
+    background-color: red;
+    color: gold;
+    border: 2px solid black;    
+}
