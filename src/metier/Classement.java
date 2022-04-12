@@ -26,19 +26,19 @@ public class Classement
 
     HashMap<Integer, List<Integer>> MapClassement = new HashMap<Integer, List<Integer>>();
 
-    public void Classement(List<Integer> Class1, List<Integer> Class2, List<Integer> Class3, List<Integer> Class4, List<Integer> Class5,
-        List<Integer> Class6, List<Integer> Class7, List<Integer> Class8, List<Integer> Class9)
+    public void Classement(List<Integer> class1, List<Integer> class2, List<Integer> class3, List<Integer> class4, List<Integer> class5,
+        List<Integer> class6, List<Integer> class7, List<Integer> class8, List<Integer> class9)
     {
         // On met les listes reçues dans la map
-        MapClassement.put(1, Class1);
-        MapClassement.put(2, Class2);
-        MapClassement.put(3, Class3);
-        MapClassement.put(4, Class4);
-        MapClassement.put(5, Class5);
-        MapClassement.put(6, Class6);
-        MapClassement.put(7, Class7);
-        MapClassement.put(8, Class8);
-        MapClassement.put(9, Class9);
+        MapClassement.put(1, class1);
+        MapClassement.put(2, class2);
+        MapClassement.put(3, class3);
+        MapClassement.put(4, class4);
+        MapClassement.put(5, class5);
+        MapClassement.put(6, class6);
+        MapClassement.put(7, class7);
+        MapClassement.put(8, class8);
+        MapClassement.put(9, class9);
 
     }
 
