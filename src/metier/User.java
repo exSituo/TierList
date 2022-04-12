@@ -3,25 +3,25 @@ package metier;
 public class User
 {
 
-    private String name;
+    private String nameUser;
 
-    private String keyword;
+    private String keywordUser;
 
-    private Integer id;
+    private Integer idUser;
 
-    public String getName()
+    public String getNameUser()
     {
-        return name;
+        return nameUser;
     }
 
-    public String getKeyword()
+    public String getKeywordUser()
     {
-        return keyword;
+        return keywordUser;
     }
 
-    public Integer getId()
+    public Integer getIdUser()
     {
-        return id;
+        return idUser;
     }
 
 }
