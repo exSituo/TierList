@@ -30,20 +30,25 @@ function drop(ev) {
             <fieldset>
                 <label for="tgoat">GOAT</label>
                 <label for="tgoat">plop</label>
-                <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">                <img id="drag1" draggable="true" ondragstart="drag(event)" alt="GOKU" src="/WEB-INF/index.jpg"></div>
+                <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">                
 
+                </div>
+                    <p id="drag1" draggable="true" ondragstart="drag(event)" >1</p>
+                    <p id="drag2" draggable="true" ondragstart="drag(event)" >4</p>
+                <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">                
+
+                </div>
+
+
+                  <br><br>
+          <input type="submit" value="Submit">
             
             </fieldset>
-                <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <img id="drag2" draggable="true" ondragstart="drag(event)" alt="Bulma" src="/WEB-INF/index.jpg">
+                
             
     
     
         </form> 
-        <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <img id="drag3" draggable="true" ondragstart="drag(event)" alt="BUU" src="/WEB-INF/index.jpg">
-               
-    </div>
 
 </body>
 </html>
