@@ -156,6 +156,40 @@ public class Formulaire extends HttpServlet
                 }
             }
 
+            String[] top8 = request.getParameterValues("top8");
+            ArrayList<Integer> liste8 = new ArrayList<Integer>();
+            if (top8.length == 0)
+            {
+                int convertedtop8 = Integer.parseInt(top8[0]);
+                liste8.add(convertedtop8);
+
+            }
+            else
+            {
+                for (int i = 0; i < top8.length; i++)
+                {
+                    int convertedtop8 = Integer.parseInt(top8[i]);
+                    liste8.add(convertedtop8);
+                }
+            }
+
+            String[] top9 = request.getParameterValues("top9");
+            ArrayList<Integer> liste9 = new ArrayList<Integer>();
+            if (top9.length == 0)
+            {
+                int convertedtop9 = Integer.parseInt(top9[0]);
+                liste9.add(convertedtop9);
+
+            }
+            else
+            {
+                for (int i = 0; i < top9.length; i++)
+                {
+                    int convertedtop9 = Integer.parseInt(top9[i]);
+                    liste9.add(convertedtop9);
+                }
+            }
+
         }
         catch (Exception e)
         {
