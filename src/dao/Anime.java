@@ -4,7 +4,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.apache.log4j.Logger;
 
@@ -39,8 +41,9 @@ public class Anime
         try
         {
             Connection c = transaction.getConnexion();
-            String requete = "insert  from "; 
-
+            
+            
+            String requete = "insert"; 
            
         }
         catch (Exception e)
@@ -57,20 +60,37 @@ public class Anime
      * Key --> idUser Value --> score classement
      */
    
-    public Map<Integer, Classement> affClassementUser (Transaction transaction, User idUser)
+    public void affClassementUser (Transaction transaction, User idUser, Classement classement)
     {
         Map<Integer, Classement> resultat = new HashMap<>();
-
+        int[] resultatInsertClassement = new int[0];
         try
         {
+            
+            
             Connection c = transaction.getConnexion();
-            String requete = "select  from "; // à modifier !
-            try (PreparedStatement st = c.prepareStatement(requete);
+            try (PreparedStatement st = c.prepareStatement("INSERT INTO tiers (id_tier, niveau, id_user, id_anime) VALUES )"
+                + " VALUES (id_tier,?,?,?)");
                 ResultSet rst = st.executeQuery())
             {
                 while (rst.next())
                 {
-                    //Ce qui est renvoyé ! 
+                    List<String> ligneInsert = getDictionnaireClassement(classement); //collection de lignes
+                    
+                    for (String str : ligneInsert)
+                    {
+                        String[] attributs = str.split(",");
+                            Integer nivClas = Integer.valueOf(attributs[0]);
+                            String idClient = attributs[1];
+                            Integer idAnime = Integer.valueOf(attributs[2]); 
+                            
+                            st.setString(nivClas,idClient);
+
+                    }
+                    
+                    int[] resultatInsertAdresse = st.executeBatch();
+                    
+                
                 }
             }
             
@@ -80,10 +100,36 @@ public class Anime
         {
             Logger.getLogger(Anime.class).error(e.getMessage());
         }
-        
-        return null;
-        
+                
     }
     
+    public List<String> getDictionnaireClassement (Classement classement){
+        List<String> collectionInsert = null; //liste des lignes à insérer
+        
+        // on retourne les éléments issues de la page web à partir de la méthode ajout classement
+        Map<Integer, List<String>> tempMap = classement.ajoutClassement();
+        
+        /*
+         * Boucle du dictionnaire 
+         */
+        for (Entry<Integer, List<String>> entry : tempMap.entrySet()) {
+           
+            for (String element : collectionInsert) //ajouter à ma collection de ligne les insertions
+            {
+                String nivClas = entry.getValue().get(0);  // 1er élément de la liste
+                String idClient = entry.getValue().get(1); // 2ème élément de la liste
+                String idAnime = entry.getValue().get(2); //3ème élément de la liste
+           
+                StringBuilder str = new StringBuilder();             
+                str.append(nivClas).append(",").append(idClient).append(",").append(idAnime)
+                .append(";");  
+                element = str.toString(); // chargement dans le tableau des lignes
+            }
+        
+        }
+        return collectionInsert; // retourne les lignes
+        
+       
+    }
     
 }

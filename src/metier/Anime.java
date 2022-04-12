@@ -2,24 +2,24 @@ package metier;
 
 public class Anime
 {
-    private String nom;
+    private String nomAnime;
+    private String urlLogo;
+    private Integer idAnime;
 
-    public String getNom()
+    public String getNomAnime()
     {
-        return nom;
+        return nomAnime;
     }
 
-    public String getUrl()
+    public String getUrlLogo()
     {
-        return url;
+        return urlLogo;
     }
 
-    public Integer getId()
+    public Integer getIdAnime()
     {
-        return id;
+        return idAnime;
     }
 
-    private String url;
-
-    private Integer id;
+  
 }
