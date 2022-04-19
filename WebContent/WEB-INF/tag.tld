@@ -1,0 +1,14 @@
+<taglib version="2.0">
+    <tlibversion>1.0</tlibversion>
+    <uri>/tag</uri>
+    
+    <tag>
+        <name>Tierliste</name>
+        <tag-class>presentation.tag.Tiers</tag-class>
+        <attribute>
+            <name>type</name>
+            <required>yes</required>
+        </attribute>
+        <body-content>empty</body-content>
+    </tag>
+</taglib>
